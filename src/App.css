@@ -1,38 +1,110 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* App Container */
 .App {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  width: 90%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Heading */
+.App h1 {
+  font-size: 24px;
+  color: #444;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Form Styles */
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 15px;
+}
+
+form label {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+}
+
+form input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+form input:focus {
+  border-color: #007BFF;
+}
+
+/* Button Styles */
+form button {
+  background: #007BFF;
   color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+form button:hover {
+  background: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+form button:last-child {
+  background: #ff4d4d;
+  margin-left: 10px;
+}
+
+form button:last-child:hover {
+  background: #e60000;
+}
+
+/* Final BMI and Message */
+.final {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #007BFF;
+}
+
+form p {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .App {
+    padding: 15px 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  form button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .App h1 {
+    font-size: 20px;
   }
 }
